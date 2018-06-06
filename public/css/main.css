@@ -1,0 +1,97 @@
+/*!
+ * Main Css
+ */
+body {
+  background-color: #ececec !important;
+}
+ /* ================ Navbar =================== */
+.container .row nav.navbar {
+  margin-bottom: 10px;
+}
+
+/* ================ Login button block =================== */
+#login .form-group {
+  position: relative;
+}
+
+#login .invalid-feedback {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  text-align: right;
+}
+
+.in-out-block {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* ================ User info block =================== */
+#user-info {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* ================ User list Table =================== */
+#users-list {
+  margin-top: 5px;
+}
+#users-list > tbody > tr > td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 30px;
+}
+
+/* ================ Breadcrumbs =================== */
+.breadcrumb {
+  margin-bottom: 5px;
+  background-color: #dee2e6 !important;
+  border: 1px solid #d8d6d6;
+}
+
+/* ================ Helpers =================== */
+.margin-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* ================ Add User Form =================== */
+#form-add-user .invalid-feedback {
+  position: absolute;
+  top: -22px;
+  right: 0;
+  text-align: right;
+}
+
+/* ================ Products =================== */
+.del-product {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  line-height: 1.1;
+  opacity: 0.5;
+}
+.media {
+  font-size: 10pt;
+}
+.card-body {
+  background: #868f96;
+  padding: 10px 15px 15px 15px !important;
+}
+
+.page-item.active.disabled > a {
+  color: #fff !important;
+  background-color: #007bff !important;
+  border-color: #007bff !important;
+} 
+
+
+@media (max-width: 767px) {
+  #count-products {
+    margin-bottom: 10px;
+  }
+  .btn-group {
+    margin-bottom: 10px;
+  }
+}
