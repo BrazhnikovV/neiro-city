@@ -12,9 +12,17 @@ var imagemin = require('gulp-imagemin');
 
 // Lint Task
 gulp.task('lint', function() {
-    return gulp.src('public/js/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
+    return gulp.src([        
+        'public/js/jquery-3.2.1.min.js',
+        'public/js/jquery.mobile-1.5.0-alpha.min',
+        'public/js/pixi.min.js',
+        'public/js/bootstrap.min.js',
+        'public/js/Requester.js',
+        'public/js/canvas.js',
+        'public/js/main.js'
+    ])
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
 });
 
 // Compile Our Sass
@@ -28,21 +36,29 @@ gulp.task('sass', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    return //gulp.src('public/js/*.js')
-        gulp.src(['public/js/bootstrap.js'])
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('public/dist'))
-        .pipe(rename('all.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('public/dist/js'));
+    return gulp.src([
+        'public/js/jquery-3.2.1.min.js',
+        'public/js/jquery.mobile-1.5.0-alpha.min',
+        'public/js/pixi.min.js',
+        'public/js/bootstrap.min.js',
+        'public/js/Requester.js',
+        'public/js/canvas.js',
+        'public/js/main.js'
+    ])
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('public/dist'))
+    .pipe(rename('all.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('public/dist/js'));
 });
 
 // Concatenate & Minify CSS
 gulp.task('css', function () {
     //gulp.src('public/css/*.css')
-    gulp.src([
-        'public/css/main.css',
-        'public/css/bootstrap.css'
+    gulp.src([        
+        'public/css/bootstrap.css',
+        'public/css/jquery.mobile-1.5.0-alpha.1.min.css',
+        'public/css/main.css'
     ])
     .pipe(concat('all.css'))
     .pipe(cssmin())        
