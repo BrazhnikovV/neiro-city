@@ -21,6 +21,7 @@
     "nconf": "^0.10.0",
     "path": "^0.12.7",
     "pug": "2.0.0-beta11",
+    "socket.io": "^2.1.1",
     "uri": "^0.1.0"
   },
   "description": "Web application nodejs with express",

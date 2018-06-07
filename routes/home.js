@@ -38,6 +38,42 @@ router.get('/socket', function( req, res, next ) {
     });
 });
 
+/* GET verstka-css page. */
+router.get('/verstka-css', function( req, res, next ) {
+
+    res.render( './pages/verstka_css', { 
+        title: 'NodeJs', 
+        errors: [],
+    });
+});
+
+/* GET verstka-js page. */
+router.get('/verstka-js', function( req, res, next ) {
+
+    res.render( './pages/verstka_js', { 
+        title: 'NodeJs', 
+        errors: [],
+    });
+});
+
+/* GET animation page. */
+router.get('/animation', function( req, res, next ) {
+
+    res.render( './pages/animation', { 
+        title: 'NodeJs', 
+        errors: [],
+    });
+});
+
+/* GET random page. */
+router.get('/random', function( req, res, next ) {
+
+    res.render( './pages/random', { 
+        title: 'NodeJs', 
+        errors: [],
+    });
+});
+
 /* POST ajax page. */
 router.post('/ajax', function( req, res, next ) {
 
