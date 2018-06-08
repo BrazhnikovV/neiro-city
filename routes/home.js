@@ -1,6 +1,10 @@
 // подключить главные модули приложения
 var express = require('express');
 var router = express.Router();
+// подключить фабрику пользователей
+var user = require('../app/components/User');
+// подключить Console commonjs
+// import {sayHello} from '../app/components/sayHello';
 
 /* GET home page. */
 router.get('/', function( req, res, next ) {
@@ -15,6 +19,35 @@ router.get('/', function( req, res, next ) {
 router.get('/canvas', function( req, res, next ) {
 
     res.render( './pages/canvas', { 
+        title: 'NodeJs', 
+        errors: [],
+    });
+});
+
+/* GET canvas page. */
+router.get('/user-factory', function( req, res, next ) {    
+
+    const user_obg = {
+        firstname: 'Jastin',
+        secondname: 'Biber'
+    };
+
+    const new_user  = user( user_obg ); 
+    const user_info = new_user.getUserInfo();
+
+    res.render( './pages/user-factory', { 
+        title: 'NodeJs', 
+        errors: [],
+        user: user_info
+    });
+});
+
+/* GET common page. */
+router.get('/common', function( req, res, next ) {    
+
+    //const log = console_common( 'Hello Word!' );
+
+    res.render( './pages/common', { 
         title: 'NodeJs', 
         errors: [],
     });
